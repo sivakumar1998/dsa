@@ -21,10 +21,22 @@ public class SinglyLinkedList {
         System.out.println();
     }
 
-    public void insertNodeAtBeginingOfSinglyLinkedList(int value){
+    public void insertValueAtBeginingOfSinglyLinkedList(int value){
         ListNode node=new ListNode(value);
         node.setNextNode(head);
         head=node;
+    }
+    public void insertValueAtTheEndOfSinglyLinkedList(int value){
+        ListNode node=new ListNode(value);
+        ListNode lastNode=head;
+        if(head!=null) {
+            while (lastNode.getNextNode() != null) {
+                lastNode = lastNode.getNextNode();
+            }
+            lastNode.setNextNode(node);
+        }else{
+            head=node;
+        }
     }
 
 }
