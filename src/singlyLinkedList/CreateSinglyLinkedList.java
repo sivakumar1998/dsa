@@ -22,16 +22,25 @@ public class CreateSinglyLinkedList {
         sll.insertValeAtSpecifiedLocation(60,8 );
         sll.display();
         System.out.println(sll.getLength());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+//        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
+        System.out.println("deleted node:"+sll.deleteLastNode());
         sll.display();
+        System.out.println(sll.getLength());
     }
 }
  

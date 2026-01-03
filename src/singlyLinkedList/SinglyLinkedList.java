@@ -71,9 +71,30 @@ public ListNode deleteNodeAtTheBegining(){
             ListNode temp=head;
             head=temp.getNextNode();
             temp.setNextNode(null);
+            length--;
             return temp;
         }
-
-
 }
+    public ListNode deleteLastNode(){
+            if(head==null  ) {
+                return head;
+            }else if(head.getNextNode()==null){
+               ListNode node=head;
+                head=null;
+                length--;
+                return  node;
+            }
+            else{
+                ListNode temp=head;
+                ListNode previous=null;
+                while(temp.getNextNode()!=null){
+                    previous=temp;
+                    temp=temp.getNextNode();
+
+                }
+                previous.setNextNode(null);
+                length--;
+                return  temp;
+            }
+    }
 }
