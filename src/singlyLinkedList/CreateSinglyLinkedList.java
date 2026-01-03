@@ -15,5 +15,13 @@ public class CreateSinglyLinkedList {
         sll.display();
         sll.insertValueAtTheEndOfSinglyLinkedList(70);
         sll.display();
+        System.out.println(sll.getLength());
+        sll.insertValeAtSpecifiedLocation(80,6);
+        sll.display();
+        System.out.println(sll.getLength());
+        sll.insertValeAtSpecifiedLocation(60,8 );
+        sll.display();
+        System.out.println(sll.getLength());
     }
 }
+ 
