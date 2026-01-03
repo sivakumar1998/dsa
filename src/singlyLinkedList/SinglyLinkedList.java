@@ -63,5 +63,17 @@ public int getLength(){
            length++;
         }
     }
+public ListNode deleteNodeAtTheBegining(){
+        if(head==null){
+            return head;
+        }
+        else{
+            ListNode temp=head;
+            head=temp.getNextNode();
+            temp.setNextNode(null);
+            return temp;
+        }
 
+
+}
 }

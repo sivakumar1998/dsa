@@ -16,4 +16,12 @@ public class ListNode {
     public int getData(){
         return data;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", nextNode=" + nextNode +
+                '}';
+    }
 }
