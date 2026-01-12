@@ -1,8 +1,9 @@
 package singlyLinkedList;
 
 public class SinglyLinkedList {
-   private ListNode head;
+    private ListNode head;
     private int length;
+
     public ListNode getHead() {
         return head;
     }
@@ -10,9 +11,11 @@ public class SinglyLinkedList {
     public void setHead(ListNode head) {
         this.head = head;
     }
-public int getLength(){
+
+    public int getLength() {
         return length;
-}
+    }
+
     public void display() {
         ListNode tempnode = head;
         while (tempnode != null) {
@@ -23,78 +26,112 @@ public int getLength(){
         System.out.println();
     }
 
-    public void insertValueAtBeginingOfSinglyLinkedList(int value){
-        ListNode node=new ListNode(value);
+    public void insertValueAtBeginingOfSinglyLinkedList(int value) {
+        ListNode node = new ListNode(value);
         node.setNextNode(head);
-        head=node;
+        head = node;
         length++;
     }
-    public void insertValueAtTheEndOfSinglyLinkedList(int value){
-        ListNode node=new ListNode(value);
-        ListNode lastNode=head;
-        if(head!=null) {
+
+    public void insertValueAtTheEndOfSinglyLinkedList(int value) {
+        ListNode node = new ListNode(value);
+        ListNode lastNode = head;
+        if (head != null) {
             while (lastNode.getNextNode() != null) {
                 lastNode = lastNode.getNextNode();
             }
             lastNode.setNextNode(node);
             length++;
-        }else{
-            head=node;
+        } else {
+            head = node;
             length++;
         }
     }
 
-    public void insertValeAtSpecifiedLocation(int data, int position){
-        if(position==1){
-            ListNode node=new ListNode(data);
+    public void insertValeAtSpecifiedLocation(int data, int position) {
+        if (position == 1) {
+            ListNode node = new ListNode(data);
             node.setNextNode(head);
-            head=node;
+            head = node;
             length++;
-        }else{
-            int count =1;
-            ListNode node=new ListNode(data);
-            ListNode temp=head;
-            while((count< position-1)&& (position <= length+1)){
-                temp=temp.getNextNode();
+        } else {
+            int count = 1;
+            ListNode node = new ListNode(data);
+            ListNode temp = head;
+            while ((count < position - 1) && (position <= length + 1)) {
+                temp = temp.getNextNode();
                 count++;
             }
             node.setNextNode(temp.getNextNode());
             temp.setNextNode(node);
-           length++;
+            length++;
         }
     }
-public ListNode deleteNodeAtTheBegining(){
-        if(head==null){
+
+    public ListNode deleteNodeAtTheBegining() {
+        if (head == null) {
             return head;
-        }
-        else{
-            ListNode temp=head;
-            head=temp.getNextNode();
+        } else {
+            ListNode temp = head;
+            head = temp.getNextNode();
             temp.setNextNode(null);
             length--;
             return temp;
         }
-}
-    public ListNode deleteLastNode(){
-            if(head==null  ) {
-                return head;
-            }else if(head.getNextNode()==null){
-               ListNode node=head;
-                head=null;
-                length--;
-                return  node;
-            }
-            else{
-                ListNode temp=head;
-                ListNode previous=null;
-                while(temp.getNextNode()!=null){
-                    previous=temp;
-                    temp=temp.getNextNode();
+    }
 
-                }
-                previous.setNextNode(null);
-                length--;
-                return  temp;
+    public ListNode deleteLastNode() {
+        if (head == null) {
+            return head;
+        } else if (head.getNextNode() == null) {
+            ListNode node = head;
+            head = null;
+            length--;
+            return node;
+        } else {
+            ListNode temp = head;
+            ListNode previous = null;
+            while (temp.getNextNode() != null) {
+                previous = temp;
+                temp = temp.getNextNode();
+
             }
+            previous.setNextNode(null);
+            length--;
+            return temp;
+        }
+    }
+
+    public void deleteNthNodeFromLinkedList(int position) {
+        if (position == 1) {
+            head = head.getNextNode();
+            length--;
+        } else {
+            if (position <= length) {
+                int count = 1;
+                ListNode temp = head; // 1->2->3->null
+                while (count < position - 1) {
+                    temp = temp.getNextNode();
+                    count++;
+                }
+                ListNode current = temp.getNextNode();
+                temp.setNextNode(current.getNextNode());
+                length--;
+
+            }
+        }
+    }
+
+    public boolean doesKeyExistsInLinkedList(int key) {
+        if (head != null) {
+            ListNode current = head;
+            while (current != null) {
+                if (current.getData() == key) {
+                    return true;
+                }
+                current = current.getNextNode();
+            }
+        }
+        return false;
     }
 }

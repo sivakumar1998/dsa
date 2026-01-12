@@ -31,15 +31,21 @@ public class CreateSinglyLinkedList {
 //        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
 //        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
 //        System.out.println("deleted node:"+sll.deleteNodeAtTheBegining());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
-        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+//        System.out.println("deleted node:"+sll.deleteLastNode());
+        sll.deleteNthNodeFromLinkedList(2);
         sll.display();
+        sll.deleteNthNodeFromLinkedList(7);
+        sll.display();
+        sll.deleteNthNodeFromLinkedList(5);
+        sll.display();
+        System.out.println(sll.doesKeyExistsInLinkedList(70));
         System.out.println(sll.getLength());
     }
 }
