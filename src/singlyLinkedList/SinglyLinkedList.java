@@ -50,10 +50,11 @@ public class SinglyLinkedList {
 
     public void insertValeAtSpecifiedLocation(int data, int position) {
         if (position == 1) {
-            ListNode node = new ListNode(data);
-            node.setNextNode(head);
-            head = node;
-            length++;
+//            ListNode node = new ListNode(data);
+//            node.setNextNode(head);
+//            head = node;
+//            length++;
+            insertValueAtBeginingOfSinglyLinkedList(data);
         } else {
             int count = 1;
             ListNode node = new ListNode(data);
@@ -133,5 +134,17 @@ public class SinglyLinkedList {
             }
         }
         return false;
+    }
+    public void reverseLinkedList(){
+        ListNode current=head;
+        ListNode next=null;
+        ListNode previous=null;
+        while(current!=null){
+            next=current.getNextNode();
+            current.setNextNode(previous);
+            previous=current;
+            current=next;
+
+        }
     }
 }
